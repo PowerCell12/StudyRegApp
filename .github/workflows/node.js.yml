@@ -32,3 +32,8 @@ jobs:
       run: npm start &
     - name: Run Tests
       run: npm run test
+    - name: SetUp Server
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with: 
+        service-id: ${{ secrets.RENDER_TOKEN }}
+        api-key: ${{ secrets.SERVICE_ID }}
